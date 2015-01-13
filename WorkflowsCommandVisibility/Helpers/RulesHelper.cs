@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Sitecore.Data.Items;
+﻿using Sitecore.Data.Items;
 using Sitecore.Rules;
 
-namespace CollaborativeApprovalWorkflow
+namespace WorkflowsCommandVisibility.Helpers
 {
     public static class RulesHelper
     {
