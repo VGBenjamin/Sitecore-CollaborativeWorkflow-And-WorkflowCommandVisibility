@@ -94,9 +94,6 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\CollaborativeApprovalWorkflow.config" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Properties\PublishProfiles\NLot.pubxml" />
   </ItemGroup>
   <PropertyGroup>

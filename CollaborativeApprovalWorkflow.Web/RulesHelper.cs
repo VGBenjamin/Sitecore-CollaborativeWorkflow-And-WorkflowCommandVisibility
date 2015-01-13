@@ -10,10 +10,12 @@ namespace CollaborativeApprovalWorkflow
 {
     public static class RulesHelper
     {
-        public static bool EvaluateRule(string fieldName, Item item)
+        public static bool EvaluateRule(string ruleFieldName, Item ruleItem, Item contentItem)
         {
             var ruleContext = new RuleContext();
-            foreach (Rule<RuleContext> rule in RuleFactory.GetRules<RuleContext>(new[] { item }, fieldName).Rules)
+            ruleContext.Item = contentItem;
+
+            foreach (Rule<RuleContext> rule in RuleFactory.GetRules<RuleContext>(new[] { ruleItem }, ruleFieldName).Rules)
             {
                 if (rule.Condition != null)
                 {

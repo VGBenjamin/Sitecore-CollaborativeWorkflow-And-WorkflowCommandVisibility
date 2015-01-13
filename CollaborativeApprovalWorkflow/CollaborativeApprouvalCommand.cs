@@ -14,6 +14,8 @@ namespace CollaborativeApprovalWorkflow
 
         public override CommandState QueryState(CommandContext context)
         {
+            var commandId = context.Parameters["commandid"];
+
             if (RulesHelper.EvaluateRule(HideCommandFieldName, context.Folder))
             {
                 return CommandState.Hidden;

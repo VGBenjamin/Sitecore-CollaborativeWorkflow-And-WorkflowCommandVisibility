@@ -15,8 +15,6 @@ namespace CollaborativeApprovalWorkflow.WorkflowCondition
     {
         public string FieldName { get; set; }
 
-        public string Value { get; set; }
-
         protected override bool Execute(T ruleContext)
         {
             Assert.ArgumentNotNull(ruleContext, "ruleContext");
@@ -29,7 +27,10 @@ namespace CollaborativeApprovalWorkflow.WorkflowCondition
             {
                 return false;
             }
-            return base.Compare(this.Value ?? string.Empty, Context.User.LocalName);
+
+            string str2 = item[this.FieldName];
+
+            return base.Compare(str2, Context.User.LocalName);
         }
 
     }
