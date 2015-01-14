@@ -37,7 +37,9 @@
     <PackagePublisher>Vangansewinkel Benjamin</PackagePublisher>
     <PackageReadme>Refer the the marketplace documentation for the post release installation steps.</PackageReadme>
     <PackageVersion>1.0.0</PackageVersion>
-    <SitecoreAssemblyPath>Refer the the marketplace documentation for the post release installation steps.</SitecoreAssemblyPath>
+    <SitecoreAssemblyPath>C:\inetpub\wwwroot\dehub\Website\bin</SitecoreAssemblyPath>
+    <EnableValidations>False</EnableValidations>
+    <ValidationSettingsFilePath>.\WorkflowsCommandVisibility.TDS.Master_Debug.xml</ValidationSettingsFilePath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugSymbols>false</DebugSymbols>
